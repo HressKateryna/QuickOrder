@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="QuickOrder_all" title="Quick Order" translate="title" sortOrder="30" >
+                    <resource id="QuickOrder_grid" title="Quick Order" translate="title" sortOrder="10" >
+                        <resource
+                            id="QuickOrder_convert_to_order"
+                            title="Lesson Create"
+                            translate="title"
+                            sortOrder="10"
+                        />
+                        <resource
+                            id="QuickOrder_edit"
+                            title="Lesson Edit"
+                            translate="title"
+                            sortOrder="20"
+                        />
+                        <resource
+                            id="QuickOrder_delete"
+                            title="Lesson Delete"
+                            translate="title"
+                            sortOrder="30"
+                        />
+                        <resource
+                            id="QuickOrder_mass_delete"
+                            title="Mass Delete"
+                            translate="title"
+                            sortOrder="40"
+                        />
+                    </resource>
+                    <resource id="QuickOrder_gridStatus" title="Status Order" translate="title" sortOrder="10" >
+                        <resource
+                            id="QuickOrder_add"
+                            title="Lesson Add Status"
+                            translate="title"
+                            sortOrder="10"
+                        />
+                        <resource
+                            id="QuickOrder_edit_status"
+                            title="Lesson Edit Status"
+                            translate="title"
+                            sortOrder="20"
+                        />
+                        <resource
+                            id="QuickOrder_delete_status"
+                            title="Lesson Delete Status"
+                            translate="title"
+                            sortOrder="30"
+                        />
+                        <resource
+                            id="QuickOrder_mass_delete_status"
+                            title="Mass Delete Status"
+                            translate="title"
+                            sortOrder="40"
+                        />
+                    </resource>
+                    <resource
+                        id="QuickOrder_system_config"
+                        title="MagentoAcademy System Config"
+                        translate="title"
+                        sortOrder="40"
+                    />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
