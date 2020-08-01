@@ -1,6 +1,36 @@
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="ALevel_QuickOrder::all" title="Quick Order" translate="title" module="ALevel_QuickOrder" sortOrder="20" dependsOnModule="QuickOrder" resource="Sysint_MagentoAcademy::all"/>
-        <add id="ALevel_QuickOrder::grid" title="Quick Order" translate="title" module="ALevel_QuickOrder" sortOrder="10" parent="ALevel_QuickOrder::all" action="quickorder/grid/listing" resource="Light::grid"/>
+        <add
+            id="ALevel_QuickOrder::all"
+            title="Quick Order"
+            translate="title"
+            module="ALevel_QuickOrder"
+            sortOrder="20"
+            dependsOnModule="ALevel_QuickOrder"
+            resource="Sysint_MagentoAcademy::all"
+        />
+        <add
+            id="ALevel_QuickOrder::grid"
+            title="Quick Order"
+            translate="title"
+            module="ALevel_QuickOrder"
+            sortOrder="10"
+            parent="ALevel_QuickOrder::all"
+            action="alevel_quickorder/grid/listing"
+            resource="ALevel_Light::grid"
+        />
+        <add
+            id="ALevel_QuickOrder::gridStatus"
+            title="Status Order"
+            translate="title"
+            module="ALevel_QuickOrder"
+            sortOrder="30"
+            parent="ALevel_QuickOrder::all"
+            action="ALevel_quickorder/status/listing"
+            resource="ALevel_Light::gridStatus"
+        />
     </menu>
 </config>
