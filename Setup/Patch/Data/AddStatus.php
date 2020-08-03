@@ -1,8 +1,8 @@
 <?php
 
-namespace ALevel\QuickOrder\Setup\Patch\Data;
+namespace Alevel\QuickOrder\Setup\Patch\Data;
 
-use ALevel\QuickOrder\Model\StatusFactory;
+use Alevel\QuickOrder\Model\StatusFactory;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\DB\TransactionFactory;
 
@@ -32,11 +32,13 @@ class AddStatus implements DataPatchInterface
 
     public function apply()
     {
+        $default_status = ["Accepted","In progress","Completed"];
+
         $transaction = $this -> transactionFactory -> create();
 
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i <= count($default_status); $i++) {
             $model = $this -> modelFactory -> create();
-            $model -> setName(sprintf("Status %d", $i));
+            $model -> setStatus($default_status[$i]);
             $transaction -> addObject($model);
         }
 

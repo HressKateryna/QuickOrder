@@ -1,6 +1,6 @@
 <?php
 
-namespace Alevel\QuickOrder\UI\Component\Listing\Column;
+namespace ALevel\QuickOrder\UI\Component\Listing\Column;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
@@ -9,7 +9,6 @@ use Magento\Ui\Component\Listing\Columns\Column;
 
 class Actions extends Column
 {
-    const URL_PATH_CONVERT = 'alevel_quickorder/grid/converttoorder';
     const URL_PATH_DELETE = 'alevel_quickorder/grid/delete';
 
     public function __construct(
