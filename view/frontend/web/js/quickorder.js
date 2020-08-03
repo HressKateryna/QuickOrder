@@ -25,7 +25,7 @@ define(
                 var options = {
                     type: 'popup',
                     responsive: true,
-                    title: 'Quick Order',
+                    title: 'Enter your details',
                     buttons: [{
                         text: $.mage.__('Continue'),
                         class: '',

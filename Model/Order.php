@@ -6,7 +6,7 @@ use ALevel\QuickOrder\Api\Model\OrderInterface;
 use Magento\Framework\Model\AbstractModel;
 use ALevel\QuickOrder\Model\ResourceModel\Order as ResourceModel;
 
-class Order extends AbstractModel implements OrderInterface
+class Order extends AbstractModel
 {
     const LABEL = 'update_at';
 

@@ -6,7 +6,7 @@ use ALevel\QuickOrder\Api\Model\StatusInterface;
 use Magento\Framework\Model\AbstractModel;
 use ALevel\QuickOrder\Model\ResourceModel\Status as ResourceModel;
 
-class Status extends AbstractModel implements StatusInterface
+class Status extends AbstractModel
 {
     const LABEL = 'update_at';
 
